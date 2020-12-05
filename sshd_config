@@ -63,16 +63,16 @@ PermitRootLogin without-password
 ChallengeResponseAuthentication no
 
 # Kerberos options
-KerberosAuthentication yes
-KerberosOrLocalPasswd no
-KerberosTicketCleanup yes
+#KerberosAuthentication yes
+#KerberosOrLocalPasswd yes
+#KerberosTicketCleanup yes
 #KerberosGetAFSToken no
 
 # GSSAPI options
 GSSAPIAuthentication yes
 GSSAPICleanupCredentials yes
 #GSSAPIStrictAcceptorCheck yes
-#GSSAPIKeyExchange no
+GSSAPIKeyExchange yes
 
 # Set this to 'yes' to enable PAM authentication, account processing,
 # and session processing. If this is enabled, PAM authentication will
@@ -83,7 +83,7 @@ GSSAPICleanupCredentials yes
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
-UsePAM yes
+UsePAM no
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
@@ -99,7 +99,7 @@ PrintMotd no
 #Compression delayed
 #ClientAliveInterval 0
 #ClientAliveCountMax 3
-#UseDNS no
+UseDNS yes
 #PidFile /var/run/sshd.pid
 #MaxStartups 10:30:100
 #PermitTunnel no
